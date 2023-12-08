@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const isAuth = require('../middlewares/passport-auth').isAuth;
-const isAdmin = require('../middlewares/passport-auth').isAdmin;
 
 router.get('/', (req, res) => {
     if (req.isAuthenticated()) {

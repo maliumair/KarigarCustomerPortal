@@ -34,13 +34,7 @@ async function createNewUser(req, res, next) {
         }
     }
 }
-async function getAllUsers(req, res, next) {
-    try {
-        res.json(await User.find({}))
-    } catch (err) {
-        next(err)
-    }
-}
+
 async function getUserById(req, res, next) {
     try {
         let user = await User.findById(req.params.id)
@@ -59,6 +53,5 @@ async function getUserById(req, res, next) {
 }
 module.exports = {
     createNewUser,
-    getAllUsers,
     getUserById,
 }
