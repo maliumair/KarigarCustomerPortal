@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Karigar</title>
+    <%- include('partials/head'); %>
+</head>
+
+<body>
+    <%- include('partials/nav'); %>
+        <%- include('partials/jumbotron'); %>
+            <div class="container main p-3 mt-5 mb-5 primary">
+                <div class="row mt-5 justify-content-left" id="services-container">
+                </div>
+            </div>
+            <div id="proceed" class="grow col-md-4 col-sm-8 col-10 p-4">
+                <div class="d-table-cell align-middle">
+                    <span id="total-quantity">0</span>
+                    <span id="total-cost">Rs 0</span>
+                    <span id="continue">Continue <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="modal fade" id="cart-modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="cartmodal" aria-hidden="true">
+                <div class="modal-dialog mw-100" style="width:100%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div id="cart-modal-body" class="modal-body">
+                            <div class="row justify-content-center mt-2">
+                                <div class="col-md-8 col-12">
+                                    <div class="row justify-content-left mt-2">
+                                        <h3>Items</h3>
+                                    </div>
+                                    <div class="row justify-content-left" id="cart-items">
+
+                                    </div>
+                                    <div class="row justify-content-center mt-2">
+                                        <div class="col-12 justify-content-center">
+                                            <p id="error1" class="error text-center text-dark"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('partials/footer'); %>
+                <script type="text/javascript" src="/static/js/cart.js"></script>
+                <script type="text/javascript" src="/static/js/services.js"></script>
+</body>
+
+</html>
